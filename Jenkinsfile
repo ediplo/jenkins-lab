@@ -2,9 +2,11 @@ pipeline {
      agent any
 
      stages {
-          stage('Inicial'){
+          stage('Build Image'){
                steps {
-                   echo 'Iniciando Pipeline'
+                    script {
+                         dockerapp = docker.build("ediplo/green", '-f ./GreenHomeImage/Dockerfile')
+                    }
                }
 
           }
