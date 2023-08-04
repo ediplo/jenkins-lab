@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: nginx-green
-        image: fabricioveronez/greenhome
+        image: ediplo/green:latest
         ports:
         - containerPort: 8080
   
