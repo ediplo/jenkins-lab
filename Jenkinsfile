@@ -25,7 +25,7 @@ pipeline {
 
            stage('Deploy K8S'){
                steps {
-                    withKubeConfig([credentialId: 'kubeconfig']) {
+                    withKubeConfig([credentialsId: 'kubeconfig']) {
                          sh 'kubectl apply -f ./Kubernetes/green-deploy.yaml'
                     }
                }
